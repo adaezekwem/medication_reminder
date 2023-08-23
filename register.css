@@ -1,0 +1,666 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #39a9ff, #032845);
+}
+nav{
+    background: #1d374b;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+a.active,a:hover{
+    background: #0b4776;
+    transition: .5s;
+    color: rgb(9, 9, 113);
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.loginbox{
+    max-width: 500px;
+    width: 50%;
+    margin-top: 2.2%;
+    justify-content: center;
+    align-items: center;
+    background-color: #90cfffa5;
+    padding: 25px 30px;
+    border-radius: 5px;
+    border-right: solid #032845 1px;
+    height: 50px;
+}
+.container-login{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding: 10px;
+}
+.regstudent{
+    max-width: 700px;
+    width: 50%;
+    margin-top: 2.2%;
+    justify-content: center;
+    align-items: center;
+    background-color: #90cfffa5;
+    padding: 25px 30px;
+    border-radius: 5px;
+    border-right: solid #032845 1px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #39a9ff, #032845);
+}
+.item-content {
+    display: none;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+.container-display {
+    margin-right: 200px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #39a9ff, #032845);
+
+  }
+.displaybox{
+    text-align: center;
+    max-width: 700px;
+    width: 50%;
+    margin-top: 2.2%;
+    margin-right: -5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #90cfffa5;
+    padding: 25px 30px;
+    border-radius: 5px;
+    border-right: solid #032845 1px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container-login .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #39a9ff, #032845);
+}
+.container-login .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #39a9ff, #032845);
+}
+.container form .studentform-details fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: normal;
+    justify-content: space-between;
+    margin: 2px 0 5px 0;
+}
+.container-login form .login-details fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: normal;
+    justify-content: space-between;
+    margin: 2px 0 5px 0;
+}
+form .studentform-details fieldset .input-box{
+    margin-bottom: 5px;
+    width: calc(100% / 2 - 20px);
+}
+form .login-details fieldset .input-box{
+    margin-bottom: 5px;
+    width: 100%;
+}
+form .studentform-details fieldset .input-boxtextarea{
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+form .login-details fieldset .input-boxtextarea{
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.studentform-details fieldset .input-box input{
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #032845;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.login-details fieldset .input-box input{
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #032845;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.studentform-details fieldset .input-box input:focus, .studentform-details .input-box input:valid{
+    border-color: #39a9ff;
+}
+.studentform-details fieldset .input-box .details{
+    font-weight: 10;
+    display: block;
+    margin-bottom: 1px;
+}
+.studentform-details fieldset textarea{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #032845;
+    padding-left: 15px;
+    padding-top: 5px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+fieldset{
+    border: none;
+}
+form .gender-details .gender-title{
+    font-weight: 50;
+}
+form .gender-details fieldset .category{
+    display: flex;
+    width: 100%;
+    margin: 2px 0;
+    justify-content: space-between;
+
+}
+.gender-details .category label {
+    display: inline-flex;
+    align-items: center;
+}
+.gender-details .category .dot{
+    height: 15px;
+    width: 15px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one, #dot-2:checked ~ .category label .two{
+    border-color: #d9d9d9;
+    background: #032845;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .button{
+    height: 45px;
+    margin-top: 20px;
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #51abf0, #0e4167);
+}
+form .button input:hover{
+    background: linear-gradient(-135deg, #51abf0, #0e4167);
+
+}
+.studentform-details legend{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.login-details legend{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.schedule-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #39a9ff, #032845);
+}
+.schedule-container .schedulemed-bigtitle{
+    text-align: center;
+    font-size: 40px;
+    color: #032845;
+    position: relative;
+    margin-top: 1.7%;
+}
+.schedulemed{
+    background-color: #90cfffa5;
+    padding: 25px 30px;
+    border-radius: 5px;
+    margin-top: 1.7%;
+    width: 70%;
+}
+.schedule-container .schedule-title{
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+}
+.schedule-container .schedule-title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 57px;
+    background: linear-gradient(135deg, #39a9ff, #032845);
+}
+.schedule-container form .schedulemedform-details{
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: normal;
+    justify-content: space-between;
+    margin: 2px 0 5px 0;
+    font-size: 18px;
+}
+form .schedulemedform-details .search-container{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 100%;
+}
+form .schedulemedform-details .input-box{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: calc(100% / 2 - 20px);
+}
+form .schedulemedform-details .input-boxtextarea{
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.schedulemedform-details .input-box input{
+    height: 30px;
+    width: 100%;
+    margin-top: 3px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #032845;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.schedulemedform-details .search-container input{
+    height: 30px;
+    width: 50%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #032845;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.schedulemedform-details textarea{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #032845;
+    padding-left: 15px;
+    padding-top: 5px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.ongoing-container{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.ongoing-table{
+    width: 80%;
+    background-color: #90cfffa5;
+    margin-top: 3%;
+    padding: 30px 30px;
+    border-spacing: 0;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ongoing-table td{
+    margin-bottom: 20px;
+}
+.ongoing-table td, .ongoing-table .table-head{
+    padding: 12px 15px;
+}
+.ongoing-table tr:nth-child(odd){
+    background-color: #0e40677f;
+}
+.ongoing-table .table-head{
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    color: white;
+}
+
+
+@media only screen and (max-width: 584px){
+    /*mobile phone*/
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #0082e6;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: rgb(9, 9, 113);
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .regstudent{
+        float: none;
+        width: 100%;
+        margin-left: 0%;
+    }
+    .container{
+        max-width: 100%;
+    }
+    body{
+        height: 100%;
+    }
+    form .studentform-details fieldset .input-box{
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    form fieldset .gender-details .category{
+        width: 100%;
+    }
+    .container form .studentform-details{
+        max-height: 350px;
+        overflow-y: scroll;    
+    }
+    .studentform-details::-webkit-scrollbar{
+        width: 0;
+    }
+    .schedule-container .schedulemed-bigtitle{
+        font-size: 27px;
+        margin-top: 2%;
+    }
+    .schedule-container form .schedulemedform-details{
+        max-height: 350px;
+        overflow-y: scroll;    
+    }
+    .schedulemedform-details::-webkit-scrollbar{
+        width: 0;
+    }
+    .schedulemed{
+        width: 85%;
+    }
+    .schedule-container .schedule-title{
+        font-size: 22px;
+    }
+    .schedule-container .schedule-title::before{
+        height: 3px;
+        width: 39px;
+    }
+    form .schedulemedform-details .search-container{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    form .schedulemedform-details .input-box, .schedulemedform-details .input-box input, .schedulemedform-details .search-container input, .schedulemedform-details textarea{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 585px) and (max-width: 768px) {
+    /* CSS rules for tablets */
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #0082e6;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: rgb(9, 9, 113);
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .regstudent{
+        width: 100%;
+        float: none;
+        flex: 1;
+        margin-left: 0;
+    }
+    .container{ 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    body{
+        height: 100%;
+    }
+    .schedule-container .schedulemed-bigtitle{
+        font-size: 27px;
+    }
+    .schedulemed{
+        width: 90%;
+    }
+    .schedule-container .schedule-title{
+        font-size: 22px;
+    }
+    .schedule-container .schedule-title::before{
+        height: 3px;
+        width: 39px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /*inbetween tablet and laptop*/
+    label.logo{
+        font-size: 30px;
+        padding-left: 30px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #0082e6;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: rgb(9, 9, 113);
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .regstudent{
+        float: none;
+        width: 100%;
+        flex: 1;
+        margin-left: 0;
+    }
+    .container{ 
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    body{
+        height: 100%;
+    }
+    .schedule-container .schedulemed-bigtitle{
+        font-size: 34px;
+    }
+    .schedulemed{
+        width: 80%;
+    }
+    .schedule-container .schedule-title{
+        font-size: 24px;
+    }
+    .schedule-container .schedule-title::before{
+        height: 3px;
+        width: 45px;
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1250px) {
+    /* CSS rules for desktop computers and large laptops */
+    .regstudent{
+        float: none;
+        width: 100%;
+        flex: 1;
+        margin-left: 0;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .schedule-container .schedulemed-bigtitle{
+        font-size: 37px;
+    }
+ 
+}
+@media only screen and (min-width: 1281px) {
+    /* CSS rules for large desktop screens */
+    .regstudent{
+        float: none;
+        width: 100%;
+        flex: 1;
+        margin-left: 0;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}  
